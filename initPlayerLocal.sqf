@@ -38,4 +38,4 @@ Source: https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#:~:text=While
         } forEach _this;  
     }];
 
-} forEach switchableUnits;
+} forEach playableUnits;
