@@ -21,3 +21,5 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 - Once woken up, damage handler no longer works
 - Blowing self up, activates beep but only for client
 - Getting shot makes the player change weapon (????????????????)
+- ~~Some units getting MILES 'hit' and not others~~
+    - This was caused by units being able to die. Won't be a problem on the proper server
