@@ -19,13 +19,14 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 
 ## Known Bugs to Fix
 
-- Only the person who shoots the person can then wake them up
-- Only person who shoots the person can hear the beep
-- Wake up option being applied once per shot
-- Beep playing mutliple times, once per shot
-- ~~Once woken up, damage handler no longer works~~
+1) Only the person who shoots the person can then wake them up
+2) Only person who shoots the person can hear the beep
+3) ~~Wake up option being applied once per shot~~
+    - Fixed indirectly by fixing bug 5
+4) Beep playing mutliple times, once per shot
+5) ~~Once woken up, damage handler no longer works~~
     - Fixed by changing ace_medical_status_fnc_setUnconsciousState to ace_medical_fnc_setUnconscious
-- Blowing self up, activates beep but only for client
-- Getting shot makes the player change weapon (????????????????)
-- ~~Some units getting MILES 'hit' and not others~~
+6) Blowing self up, activates beep but only for client
+7) Getting shot makes the player change weapon (????????????????)
+8) ~~Some units getting MILES 'hit' and not others~~
     - This was caused by units being able to die. Won't be a problem on the proper server
