@@ -12,13 +12,19 @@ This system is intended to simulate the real-life MILES system, a system of sens
 
 In Arma 3, this system is simulated with a combination of 'states'. In short, if you are shot anywhere in a 'lethal' area i.e the torso or the head, you will immediately fall unconscious and a loud BEEP will sound from your character. You will remain this way for 30 minutes, unless woken up at a medical facility by a medic. You will still receive normal ACE wounds so will need to be treated for those wounds too.
 
+## To be Considered
+
+- Grenades are very powerful
+- Self-inflicted damage
+
 ## Known Bugs to Fix
 
 - Only the person who shoots the person can then wake them up
 - Only person who shoots the person can hear the beep
 - Wake up option being applied once per shot
 - Beep playing mutliple times, once per shot
-- Once woken up, damage handler no longer works
+- ~~Once woken up, damage handler no longer works~~
+    - Fixed by changing ace_medical_status_fnc_setUnconsciousState to ace_medical_fnc_setUnconscious
 - Blowing self up, activates beep but only for client
 - Getting shot makes the player change weapon (????????????????)
 - ~~Some units getting MILES 'hit' and not others~~

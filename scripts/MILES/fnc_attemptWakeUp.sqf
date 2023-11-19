@@ -10,7 +10,7 @@ if ([_unitToAttemptWakeUp] call ace_medical_treatment_fnc_isInMedicalFacility) t
     //If the person waking up is a medic
     if ([_player] call ace_medical_treatment_fnc_isMedic) then {
 
-        [_unitToAttemptWakeUp, false] call ace_medical_status_fnc_setUnconsciousState;
+        [_unitToAttemptWakeUp, false] call ace_medical_fnc_setUnconscious;
         
         //Remove the wake up option
         removeAllActions _unitToAttemptWakeUp;
