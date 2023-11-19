@@ -43,9 +43,7 @@ MILES_handle_hit_on_unit = {
 
         _unitBeingHit say3D ["MilesBeep", 60, 1, 2, 0];
 
-        _test = "Hello!";
-
-        _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _unitBeingHit, _test], 1.5, true, false, "", "true", 5];
+        _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _unitBeingHit], 1.5, true, false, "", "true", 5];
     };
 };
 
