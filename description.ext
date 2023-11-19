@@ -1,0 +1,18 @@
+respawn = "BASE";
+respawnButton = 0;
+respawnDelay = 60;
+
+disableChannels[] = {0, 1, 2, 3, 4};
+
+disabledAI = 1;
+
+class CfgSounds
+{
+	sounds[] = {};
+
+	class MilesBeep {
+		name = "MilesBeep";
+		sound[] = { "sounds\miles-beep.ogg", 1, 1 };
+		titles[] = {};
+	}
+};
