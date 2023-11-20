@@ -12,6 +12,8 @@ This system is intended to simulate the real-life MILES system, a system of sens
 
 In Arma 3, this system is simulated with a combination of 'states'. In short, if you are shot anywhere in a 'lethal' area i.e the torso or the head, you will immediately fall unconscious and a loud BEEP will sound from your character. You will remain this way for 30 minutes, unless woken up at a medical facility by a medic. You will still receive normal ACE wounds so will need to be treated for those wounds too.
 
+**This implementation does not work with AI but it can be changed to work with AI**
+
 ## To be Considered
 
 - Grenades are very powerful
@@ -30,3 +32,4 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 7) Getting shot makes the player change weapon (????????????????)
 8) ~~Some units getting MILES 'hit' and not others~~
     - This was caused by units being able to die. Won't be a problem on the proper server
+9) Waking someone up will not remove the action for other players meaning they get more than one wake up option on them if shot multiple times
