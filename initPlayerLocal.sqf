@@ -38,13 +38,9 @@ MILES_attempt_wake_up = {
 MILES_handle_hit_on_unit = {
     params ["_unitBeingHit"];
 
-    if ([_unitBeingHit] call ace_common_fnc_isAwake) then {
-        [_unitBeingHit, true, 1800, false] call ace_medical_fnc_setUnconscious;
+    _unitBeingHit say3D ["MilesBeep", 60, 1, 2, 0];
 
-        _unitBeingHit say3D ["MilesBeep", 60, 1, 2, 0];
-
-        _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _unitBeingHit], 1.5, true, false, "", "true", 5];
-    };
+    _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _unitBeingHit], 1.5, true, false, "", "true", 5];
 };
 
 {
@@ -57,11 +53,15 @@ MILES_handle_hit_on_unit = {
             _placeHit = (_x select 5) select 0; 
     
             if (_placeHit in _fatalDamageSources) then { 
-                hint "Hit fatal area"; 
-
                 _thisSoldier = (_x select 0);
 
-                [_thisSoldier] remoteExec ["MILES_handle_hit_on_unit", 0];                  
+                if ([_thisSoldier] call ace_common_fnc_isAwake) then {
+
+                    [_thisSoldier, true, 1800, false] call ace_medical_fnc_setUnconscious; 
+
+                    _thisSoldier remoteExec ["MILES_handle_hit_on_unit", 0, true];                     
+                };
+
             }; 
     
         } forEach _this;  
