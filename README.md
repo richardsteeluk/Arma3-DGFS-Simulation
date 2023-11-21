@@ -17,6 +17,7 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 ## To be Considered
 
 - Grenades are very powerful
+    - After further testing, the shrapnel isn't so bad, it's the shockwave that will score a 'hit', even through cover
 - Self-inflicted damage
 
 ## Known Bugs to Fix
@@ -30,9 +31,11 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 4) Beep playing mutliple times, once per shot
 5) ~~Once woken up, damage handler no longer works~~
     - Fixed by changing ace_medical_status_fnc_setUnconsciousState to ace_medical_fnc_setUnconscious
-6) Blowing self up, activates beep but only for client
-7) Getting shot makes the player change weapon (????????????????)
+6) ~~Blowing self up, activates beep but only for client~~
+    - Fixed indrectly by fixing bug 5
+7) ~~Getting shot makes the player change weapon (????????????????)~~
     - Fixed indirectly by fixing bug 5
 8) ~~Some units getting MILES 'hit' and not others~~
     - This was caused by units being able to die. Won't be a problem on the proper server
-9) Waking someone up will not remove the action for other players meaning they get more than one wake up option on them if shot multiple times
+9) ~~Waking someone up will not remove the action for other players meaning they get more than one wake up option on them if shot multiple times~~
+    - Refactored to remoteexec a function to do this instead of calling a clientside script
