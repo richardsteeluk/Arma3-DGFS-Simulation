@@ -12,7 +12,9 @@ This system is intended to simulate the real-life MILES system, a system of sens
 
 In Arma 3, this system is simulated with a combination of 'states'. In short, if you are shot anywhere in a 'lethal' area i.e the torso or the head, you will immediately fall unconscious and a loud BEEP will sound from your character. You will remain this way for 30 minutes, unless woken up at a medical facility by a medic. You will still receive normal ACE wounds so will need to be treated for those wounds too.
 
-**This implementation does not work with AI but it can be changed to work with AI**
+On the King's Rangers server, players will not die but will only go unconscious. However, if this is used in an environment with deaths enabled, the MILES beep and wake up option will not happen if the shot kills the unit. Furthermore, this system will not treat damage such as that received from a car collision or helicopter crash as a MILES 'hit'. That's just a normal injury.
+
+**This implementation does not work with AI on the King's Rangers server but it can be changed to work with AI**
 
 ## To be Considered
 
