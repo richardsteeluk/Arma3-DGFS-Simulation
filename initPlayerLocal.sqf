@@ -40,7 +40,7 @@ MILES_handle_hit_on_unit = {
 
     _unitBeingHit say3D ["MilesBeep", 60, 1, 2, 0];
 
-    _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _unitBeingHit], 1.5, true, false, "", "true", 5];
+    _unitBeingHit addAction ["Wake Up (Requires medic and medical facility)", {[player, (_this select 0)] remoteExec ["MILES_attempt_wake_up", 0, true]}, [player, _unitBeingHit], 1.5, true, false, "", "true", 5];
 };
 
 {
