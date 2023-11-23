@@ -30,7 +30,7 @@ You are shot one time with a 9mm bullet in the vest. This counts as a 'hit'. You
 
 ### Scenario 2
 
-You are shot three times with a 5.56mm bullet in the head. This counts as a 'hit'. You are knocked unconscious and hear a BEEP. You are recovered by your team and you are MILES 'woken-up' by a medic at your team's medical facility. As you receive major injuries, you remain unconscious and will need to be worked on by medical staff before you can wake up properly.
+You are shot three times with a 5.56mm bullet in the head. This counts as a 'hit'. You are knocked unconscious and hear a BEEP. You are recovered by your team and you are MILES 'woken-up' by a medic at your team's medical facility. As you received major injuries, you remain unconscious and will need to be worked on by medical staff before you can wake up properly.
 
 ### Scenario 3
 
