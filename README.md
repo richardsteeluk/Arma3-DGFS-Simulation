@@ -10,7 +10,6 @@ DGFS stands for:
 
 - Don't
 - Get
--
 - Shot
 
 This system is intended to simulate the real-life MILES system, a system of sensors worn by soldiers and fitted to their weapons, which send an receive 'lasers' to simulate bullets. It can be described as 'tactical Quazer or laser-tag'.
