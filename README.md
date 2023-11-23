@@ -1,10 +1,17 @@
-# Arma3-MILES-Simulation
+# Arma3 DGFS System
 
 ## Purpose
 
-The purpose of this repository is to host the latest version of this simulated MILES system, with an included test mission, for testing and development.
+The purpose of this repository is to host the latest version of this simulated MILES system, called DGFS, with an included test mission, for testing and development.
 
-## What is this MILES simulation?
+## What is DGFS?
+
+DGFS stands for:
+
+- Don't
+- Get
+-
+- Shot
 
 This system is intended to simulate the real-life MILES system, a system of sensors worn by soldiers and fitted to their weapons, which send an receive 'lasers' to simulate bullets. It can be described as 'tactical Quazer or laser-tag'.
 
@@ -15,6 +22,20 @@ In Arma 3, this system is simulated with a combination of 'states'. In short, if
 On the King's Rangers server, players will not die but will only go unconscious. However, if this is used in an environment with deaths enabled, the MILES beep and wake up option will not happen if the shot kills the unit. Furthermore, this system will not treat damage such as that received from a car collision or helicopter crash as a MILES 'hit'. That's just a normal injury.
 
 **This implementation does not work with AI on the King's Rangers server but it can be changed to work with AI**
+
+## Three Example Scenarios
+
+### Scenario 1
+
+You are shot one time with a 9mm bullet in the vest. This counts as a 'hit'. You are knocked unconscious and hear a BEEP. You are recovered by your team and you are MILES 'woken-up' by a medic at your team's medical facility. As you received a minor wound you can wake up. You receive some painkillers and go on your way.
+
+### Scenario 2
+
+You are shot three times with a 5.56mm bullet in the head. This counts as a 'hit'. You are knocked unconscious and hear a BEEP. You are recovered by your team and you are MILES 'woken-up' by a medic at your team's medical facility. As you receive major injuries, you remain unconscious and will need to be worked on by medical staff before you can wake up properly.
+
+### Scenario 3
+
+You are in car which crashes into a tree. Normal ACE medical applies. There is no MILES simulation as you did not get shot.
 
 ## To be Considered
 
