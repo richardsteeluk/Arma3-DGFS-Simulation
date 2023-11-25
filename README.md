@@ -61,3 +61,4 @@ You are in car which crashes into a tree. Normal ACE medical applies. There is n
     - This was caused by units being able to die. Won't be a problem on the proper server
 9) ~~Waking someone up will not remove the action for other players meaning they get more than one wake up option on them if shot multiple times~~
     - Refactored to remoteexec a function to do this instead of calling a clientside script
+10) JIP players don't have MILES applies to them but they can still 'hit' other people
