@@ -12,6 +12,16 @@ Each client will apply this event handler to every switchable unit so that their
 Source: https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#:~:text=While%20you%20can%20add%20%22HitPart%22%20handler%20to%20a%20remote%20unit%2C%20the%20respective%20addEventHandler%20command%20must%20be%20executed%20on%20the%20shooter%27s%20PC%20and%20will%20only%20fire%20on%20shooter%27s%20PC%20as%20well.
 */
 
+MILES_apply_system_to_JIP_player = {
+    params ["_JIPPlayer"];
+
+    hint str _JIPPlayer;
+};
+
+if (_this select 1) then {
+    (_this select 0) remoteExec ["MILES_apply_system_to_JIP_player", 0, true];
+};
+
 MILES_attempt_wake_up = {
     params ["_wakerUpper", "_sleepingPerson"];
 
