@@ -15,10 +15,34 @@ Source: https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#:~:text=While
 MILES_apply_system_to_JIP_player = {
     params ["_JIPPlayer"];
 
-    hint str _JIPPlayer;
+    _JIPPlayer addEventHandler ["HitPart", {  
+        _fatalDamageSources = ["spine1", "spine2", "spine3", "head", "pelvis"]; 
+
+        { 
+            _x params ["_target", "_shooter", "_projectile", "_position", "_velocity", "_selection", "_ammo", "_vector", "_radius", "_surfaceType", "_isDirect"]; 
+
+            _placeHit = (_x select 5) select 0; 
+
+            if (_placeHit in _fatalDamageSources) then { 
+                _thisSoldier = (_x select 0);
+
+                if ([_thisSoldier] call ace_common_fnc_isAwake) then {
+
+                    [_thisSoldier, true, 1800, false] call ace_medical_fnc_setUnconscious; 
+
+                    _thisSoldier remoteExec ["MILES_handle_hit_on_unit", 0, true];                     
+                };
+
+            }; 
+
+        } forEach _this;  
+    }];
 };
 
 if (_this select 1) then {
+
+    hint "You have joined in progress";
+
     (_this select 0) remoteExec ["MILES_apply_system_to_JIP_player", 0, true];
 };
 
